@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<View fx:id="view" prefWidth="500.0" stylesheets="@primary.css" xmlns="http://javafx.com/javafx/18"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dysconcsa.sondeo.views.DatosSondeoPresenter">
+    <center>
+        <ScrollPane fitToWidth="true">
+            <content>
+                <VBox spacing="7.0">
+                    <Label text="Proyecto:"/>
+                    <TextField fx:id="txtProyecto"/>
+                    <Label text="Ubicación:"/>
+                    <TextField fx:id="txtUbicacion"/>
+                    <Label text="Coordenadas:"/>
+                    <HBox alignment="CENTER_LEFT" spacing="15.0">
+                        <children>
+                            <TextField fx:id="txtCoordX"/>
+                            <TextField fx:id="txtCoordY"/>
+                        </children>
+                    </HBox>
+                    <Label text="Supervisor:"/>
+                    <TextField fx:id="txtSupervisor"/>
+                    <Label text="Sondeo No:"/>
+                    <TextField fx:id="txtSondeoNo"/>
+                    <HBox spacing="20.0">
+                        <children>
+                            <Button fx:id="btnFechaInicio" text="Seleccionar fecha de inicio"/>
+                            <Label fx:id="lblFechaInicio"/>
+                        </children>
+                        <VBox.margin>
+                            <Insets top="10.0"/>
+                        </VBox.margin>
+                    </HBox>
+                    <HBox spacing="24.0">
+                        <children>
+                            <Button fx:id="btnFechaFinal" text="Seleccionar fecha de fin"/>
+                            <Label fx:id="lblFechaFinal"/>
+                        </children>
+                        <VBox.margin>
+                            <Insets top="10.0"/>
+                        </VBox.margin>
+                    </HBox>
+                    <Label text="Operador:"/>
+                    <TextField fx:id="txtOperador"/>
+                    <Label text="Nivel freatico:"/>
+                    <TextField fx:id="txtNivelFreatico"/>
+                    <Label text="Profundidad Minima:"/>
+                    <TextField fx:id="txtProfundidadMinima"/>
+                    <Label text="Profundidad Maxima:"/>
+                    <TextField fx:id="txtProfundidadMaxima"/>
+                    <Label text="Elevacion:"/>
+                    <TextField fx:id="txtElevacion"/>
+                    <Label text="Observaciones:"/>
+                    <TextField fx:id="txtObservaciones"/>
+                    <HBox alignment="CENTER">
+                        <children>
+                            <Button defaultButton="true" mnemonicParsing="false" onAction="#action_Save" text="Aceptar"
+                                    textFill="WHITE">
+                                <graphic>
+                                    <Icon content="SAVE"/>
+                                </graphic>
+                            </Button>
+                        </children>
+                    </HBox>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+                    </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</View>

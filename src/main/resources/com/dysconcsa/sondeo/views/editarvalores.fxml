@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<View fx:id="view" minWidth="250.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dysconcsa.sondeo.views.EditarvaloresPresenter">
+    <center>
+        <VBox prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Profundidad Inicial" />
+                <TextField fx:id="txtProfundidadInicial" />
+                <Label text="Profundidad final" />
+                <TextField fx:id="txtProfunidadFinal" />
+                <Label text="Recobro" />
+                <TextField fx:id="txtRecobro" />
+                <Label text="Golpe 1" />
+                <TextField fx:id="txtGolpe1" />
+                <Label text="Golpe 2" />
+                <TextField fx:id="txtGolpe2" />
+                <Label text="Golpe 3" />
+                <TextField fx:id="txtGolpe3" />
+                <Label text="Observaciones" />
+                <TextField fx:id="txtObservaciones" />
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+        </VBox>
+    </center>
+</View>
