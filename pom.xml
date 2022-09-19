@@ -13,6 +13,8 @@
         <maven.compiler.release>11</maven.compiler.release>
         <javafx.version>18.0.2</javafx.version>
         <attach.version>4.0.15</attach.version>
+        <charm.cloudlink.version>6.0.7</charm.cloudlink.version>
+        <connect.version>2.0.1</connect.version>
         <gluonfx.plugin.version>1.0.15</gluonfx.plugin.version>
         <javafx.plugin.version>0.0.8</javafx.plugin.version>
         <mainClassName>com.dysconcsa.sondeo.SondeoApplication</mainClassName>
@@ -43,6 +45,16 @@
             <groupId>com.gluonhq</groupId>
             <artifactId>glisten-afterburner</artifactId>
             <version>2.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gluonhq</groupId>
+            <artifactId>charm-cloudlink-client</artifactId>
+            <version>${charm.cloudlink.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gluonhq</groupId>
+            <artifactId>connect</artifactId>
+            <version>${connect.version}</version>
         </dependency>
         <dependency>
             <groupId>com.gluonhq.attach</groupId>
@@ -83,6 +95,19 @@
             <groupId>org.sqldroid</groupId>
             <artifactId>sqldroid</artifactId>
             <version>1.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.json</artifactId>
+            <version>1.1.6</version>
+            <classifier>module</classifier>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.1</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 

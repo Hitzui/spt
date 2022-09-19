@@ -9,9 +9,10 @@ import javafx.beans.property.*;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class SuelosProperty {
+public class SuelosProperty implements Serializable {
 
     private final IntegerProperty ID;
     private final StringProperty nombre;

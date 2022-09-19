@@ -1,8 +1,11 @@
 package com.dysconcsa.sondeo.dao;
 
+import com.dysconcsa.sondeo.model.SuelosProperty;
 import com.gluonhq.attach.storage.StorageService;
 import com.gluonhq.attach.util.Platform;
 import com.gluonhq.attach.util.Services;
+import com.gluonhq.cloudlink.client.data.DataClientBuilder;
+import com.gluonhq.cloudlink.client.data.OperationMode;
 import org.sqldroid.SQLDroidDriver;
 
 import java.io.File;
@@ -19,6 +22,10 @@ public class DataConnection {
 
     public Connection getConnection() {
         try {
+            var dataClient = DataClientBuilder.create()
+                    .operationMode(OperationMode.LOCAL_ONLY)
+                    .build();
+            dataClient.createListDataReader("suelos", SuelosProperty.class);
             connection = DriverManager.getConnection(readDB());
             connection.setReadOnly(false);
         } catch (SQLException e) {
